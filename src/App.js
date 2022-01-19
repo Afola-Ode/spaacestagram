@@ -6,7 +6,10 @@ import "./App.css";
 const App = () => {
   return (
     <div className='container'>
-      <h1>Spacetagram</h1>
+      <div className='heading'>
+        <h1>Spacetagram</h1>
+        <p>Enjoy lovely views from NASA's Rovers</p>
+      </div>
       <Fix />
     </div>
   );

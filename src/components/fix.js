@@ -1,7 +1,14 @@
 import axios from "axios";
 import React, { Component } from "react";
+
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+
 import "./fix.css";
 
+// API path
 const apiKey = "91F9ysjCWVEvk8SIboYa2KrfEkDA0T6nEW8viSZu";
 const urlPath = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity";
 const roverDetails = () => {
@@ -12,6 +19,7 @@ const roverDetails = () => {
   });
 };
 
+// Get photo details
 const photoDetails = (date) => {
   return axios.get(`${urlPath}/photos`, {
     params: {
@@ -53,9 +61,16 @@ class Fix extends Component {
                 <img src={photo.img_src} />
                 <div class='details'>
                   <p className='title'>{photo.camera.full_name}</p>
-                  <p className='date'>{photo.earth_date}</p>
+                  <div className='col'>
+                    <p className='date'>{photo.earth_date}</p>
+
+                    <Checkbox
+                      icon={<FavoriteBorderIcon style={{ fill: "white" }} />}
+                      checkedIcon={<FavoriteIcon style={{ fill: "white" }} />}
+                      name='checkedH'
+                    />
+                  </div>
                 </div>
-                <button>Like</button>
               </div>
             </div>
           ))}

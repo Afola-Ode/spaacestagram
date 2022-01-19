@@ -15,11 +15,17 @@ body {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-h1 {
-  color: #ef62a9;
+.heading {
   text-align: center;
+  letter-spacing: 0.3rem;
+}
+.heading h1 {
+  color: #ef62a9;
   font-size: 3rem;
   padding-top: 1rem;
   font-family: "Pacifico", cursive;
-  letter-spacing: 0.3rem;
+}
+p {
+  font-size: 15px;
+  letter-spacing: 0.15rem;
 }

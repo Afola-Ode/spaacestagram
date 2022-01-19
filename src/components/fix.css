@@ -6,7 +6,7 @@
 }
 .card-item {
   background-color: #7a1a4a;
-  height: 346px;
+  height: 324px;
   width: 256px;
   border-radius: 5px;
   display: flex;
@@ -44,4 +44,13 @@
 .card-item button:hover {
   background-color: #000;
   color: white;
+}
+input[type="checkbox"] {
+  color: #7a1a4a;
+  background-color: #7a1a4a;
+}
+.col {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
 }
